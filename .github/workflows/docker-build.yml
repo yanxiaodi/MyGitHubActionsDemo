@@ -30,6 +30,6 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - name: Push to Azure Container Registry
       run: |
-        docker build -f ${{ github.workspace }}/src/MyBasicWebApiDemo/Dockerfile . -t devopscrlab.azurecr.io/myazurepipelinesdemo:${{ github.run_id }} -t devopscrlab.azurecr.io/myazurepipelinesdemo:latest
+        docker build -f ${{ github.workspace }}/src/MyBasicWebApiDemo/Dockerfile -t devopscrlab.azurecr.io/myazurepipelinesdemo:${{ github.run_id }} -t devopscrlab.azurecr.io/myazurepipelinesdemo:latest .
         docker push devopscrlab.azurecr.io/myazurepipelinesdemo:${{ github.run_id }}
     
