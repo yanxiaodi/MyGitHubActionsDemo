@@ -1,14 +1,14 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: Docker build and push
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  build:
+  docker_build_and_push:
 
     runs-on: ubuntu-latest
     environment: Production
